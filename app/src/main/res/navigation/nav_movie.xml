@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_movie"
+    app:startDestination="@id/movie_dest">
+
+    <fragment
+        android:id="@+id/movie_dest"
+        android:name="com.ducnm.bruhmovie.ui.movie.MovieFragment"
+        android:label="MovieFragment" >
+        <action
+            android:id="@+id/movie_to_movieDetail"
+            app:destination="@id/movie_detai_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/movie_detai_dest"
+        android:name="com.ducnm.bruhmovie.ui.moviedetail.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="movieId"
+            app:argType="string" />
+    </fragment>
+</navigation>
