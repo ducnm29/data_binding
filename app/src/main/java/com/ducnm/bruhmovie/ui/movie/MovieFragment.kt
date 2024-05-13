@@ -45,7 +45,7 @@ class MovieFragment : BaseFragment<MovieFragmentBinding, MovieViewModel>() {
     }
 
     private fun navigateMovieDetail(movieId: String){
-        exitTransition = MaterialElevationScale(false)
+        exitTransition = MaterialElevationScale(true)
         reenterTransition = MaterialElevationScale(true)
         val direction = MovieFragmentDirections.movieToMovieDetail(movieId = movieId)
         navController.navigate(directions = direction)
